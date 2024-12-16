@@ -35,11 +35,12 @@ systemctl enable libvirtd
 systemctl enable firewalld
 systemctl enable acpid
 
-useradd -m PiromanV
-echo PiromanV:1234 | chpasswd
-usermod -aG libvirt PiromanV
+read -p "Enter your username: " username
+useradd -m $username
+echo $username:1234 | chpasswd
+usermod -aG libvirt $username
 
-echo "PiromanV ALL=(ALL) ALL" >> /etc/sudoers.d/PiromanV
+echo "$username ALL=(ALL) ALL" >> /etc/sudoers.d/$username
 
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"

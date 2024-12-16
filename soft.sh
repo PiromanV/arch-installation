@@ -12,4 +12,4 @@ systemctl enable lightdm
 pacman -S ttf-jetbrains-mono-nerd materia-gtk-theme papirus-icon-theme
 
 # other
-pacman -S thunar firefox terminator neovim code qbittorrent obs-studio telegram-desktop maim xclip dmenu feh
+pacman -S terminator neovim maim xclip dmenu feh
